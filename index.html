@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meshtastic Store | Comunicación Off-Grid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <div class="logo">MESH<span class="highlight">STORE</span></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="#about">Quienes Somos</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="secondary-nav">
+        <a href="products.html" class="nav-btn">Productos y/o Servicios</a>
+        <a href="#about" class="nav-btn">Quienes Somos</a>
+        <a href="contact.html" class="nav-btn">Contacto</a>
+    </div>
+
+    <header class="hero-wireframe">
+        <div class="hero-image-container">
+            <!-- Using the user provided hero image -->
+            <img src="assets/meshtastic_hero_real.png" alt="Meshtastic Devices"
+                onerror="this.src='https://placehold.co/600x400/1a2035/00ff41?text=Meshtastic+Image'">
+        </div>
+        <div class="hero-text-container">
+            <h1>Bienvenid@s</h1>
+            <p>En este espacio encontrarás todo lo que necesitas para comenzar y potenciar tu experiencia con
+                Meshtastic, la red de comunicación libre y descentralizada que conecta personas sin depender de internet
+                ni telefonía.</p>
+        </div>
+    </header>
+
+    <section id="info">
+        <h2 class="section-title">¿Por qué Meshtastic?</h2>
+        <ul class="features-list">
+            <li>
+                <h3>📡 Largo Alcance</h3>
+                <p>Utilizando tecnología <span class="highlight" title="Long Range Radio">LoRa</span>, puedes
+                    comunicarte a kilómetros de distancia con un consumo mínimo de energía.</p>
+            </li>
+            <li>
+                <h3>🔋 Batería de Larga Duración</h3>
+                <p>Las placas están diseñadas para durar días o incluso semanas con una sola carga, ideal para
+                    emergencias o senderismo.</p>
+            </li>
+            <li>
+                <h3>🔐 Encriptado y Seguro</h3>
+                <p>Tus mensajes viajan seguros. La red es privada y descentralizada, tú tienes el control de tus datos.
+                </p>
+            </li>
+            <li>
+                <h3>🌐 Red Descentralizada</h3>
+                <p>Cada dispositivo actúa como un repetidor, extendiendo la red automáticamente para todos los usuarios.
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="steps">
+        <h2 class="section-title">Cómo Empezar</h2>
+        <ol class="steps-list">
+            <li>
+                <h3>Adquiere tu Placa</h3>
+                <p>Elige entre modelos como T-Beam, Heltec o RAK según tus necesidades de GPS y batería.</p>
+            </li>
+            <li>
+                <h3>Flashea el Firmware</h3>
+                <p>Instala el software de Meshtastic en tu dispositivo conectándolo a tu PC.</p>
+            </li>
+            <li>
+                <h3>Conecta tu Smartphone</h3>
+                <p>Empareja tu dispositivo vía Bluetooth usando la app de Meshtastic (iOS/Android).</p>
+            </li>
+            <li>
+                <h3>¡Empieza a Chatear!</h3>
+                <p>Únete al canal público o crea uno privado para hablar con tu grupo.</p>
+            </li>
+        </ol>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Teléfono"><i class="fas fa-phone"></i></a>
+        </div>
+        <p>&copy; 2024 Meshtastic Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,525 @@
+/* Global Reset & Typography */
+:root {
+    --bg-color: #0b0d17;
+    --card-bg: #15192b;
+    --text-color: #d0d6f9;
+    --accent-color: #00ff41;
+    /* Neon Green for Meshtastic/Tech vibe */
+    --secondary-accent: #03a9f4;
+    /* Blue for links/info */
+    --font-heading: 'Roboto Mono', monospace;
+    --font-body: 'Open Sans', sans-serif;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Navigation Wireframe Style */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--bg-color);
+    /* Matches wireframe grey/bg */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 2rem;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: var(--card-bg);
+    color: #fff;
+    outline: none;
+}
+
+.secondary-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    /* Light grey bar effect */
+    margin-bottom: 2rem;
+}
+
+.nav-btn {
+    background: #e0e0e0;
+    color: #000;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+    background: var(--accent-color);
+    color: #000;
+}
+
+/* Hero Wireframe Style */
+.hero-wireframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 10%;
+    gap: 4rem;
+    min-height: 60vh;
+}
+
+.hero-image-container {
+    flex: 1;
+    background: #ccc;
+    /* Placeholder grey from wireframe */
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Changed to contain to show full device image */
+    padding: 20px;
+    /* Add some breathing room */
+}
+
+/* Add X overlay to simulate wireframe placeholder if image fails or just for style */
+.hero-image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(0, 0, 0, 0.1) 50%, transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(0, 0, 0, 0.1) 50%, transparent calc(50% + 1px));
+    pointer-events: none;
+}
+
+.hero-text-container {
+    flex: 1;
+    text-align: left;
+    /* Wireframe has text on right */
+}
+
+.hero-text-container h1 {
+    font-size: 4rem;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero-text-container p {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #a0a6c0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-wireframe {
+        flex-direction: column;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+/* Sections */
+section {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+/* Features List (Unordered) */
+.features-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.features-list li {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+}
+
+.features-list li:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.features-list h3 {
+    color: var(--secondary-accent);
+}
+
+/* Steps List (Ordered) */
+.steps-list {
+    counter-reset: step-counter;
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.steps-list li {
+    position: relative;
+    padding-left: 4rem;
+    margin-bottom: 2rem;
+}
+
+.steps-list li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--card-bg);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2.8rem;
+    font-weight: bold;
+    font-family: var(--font-heading);
+}
+
+/* Tables (Products) */
+.table-container {
+    overflow-x: auto;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    background-color: rgba(0, 255, 65, 0.1);
+    color: var(--accent-color);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.product-img-thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #000;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* Multimedia */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.media-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #05060a;
+    padding: 3rem 5%;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    background: rgba(0, 255, 65, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+}
+
+/* Contact Page Wireframe Styles */
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-style: italic;
+    color: #fff;
+}
+
+.contact-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-image {
+    flex: 0 0 200px;
+}
+
+.wireframe-x-box {
+    width: 200px;
+    height: 150px;
+    background: #999;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #777;
+}
+
+/* X effect for wireframe box */
+.wireframe-x-box::before,
+.wireframe-x-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top right, transparent calc(50% - 1px), #555 50%, transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #555 50%, transparent calc(50% + 1px));
+}
+
+.contact-details h2 {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.contact-phone,
+.contact-email {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+}
+
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form-container h2 {
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.wireframe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.form-group label {
+    font-size: 1.2rem;
+    font-style: italic;
+    flex: 0 0 200px;
+    /* Fixed width for labels to align inputs */
+    text-align: left;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: #fff;
+    /* White input background as per wireframe look usually */
+    color: #000;
+    outline: none;
+}
+
+.submit-btn {
+    align-self: center;
+    padding: 0.8rem 4rem;
+    background: #ccc;
+    /* Grey button from wireframe */
+    color: #000;
+    font-style: italic;
+    font-size: 1.2rem;
+    border: 1px solid #999;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-family: var(--font-body);
+}
+
+.submit-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .contact-info-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        flex: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+}
+
+.copy-btn {
+    background: transparent;
+    border: 1px solid var(--secondary-accent);
+    color: var(--secondary-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.copy-btn:hover {
+    background: var(--secondary-accent);
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Simple mobile hide for now, JS can toggle */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placas | Meshtastic Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">MESH<span class="highlight">STORE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Placas</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2 class="section-title">Comparativa de Placas</h2>
+        <p style="text-align: center; margin-bottom: 2rem; color: #a0a6c0;">Encuentra el hardware perfecto para tu nodo.
+        </p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Modelo</th>
+                        <th>GPS</th>
+                        <th>Pantalla</th>
+                        <th>Batería</th>
+                        <th>Precio Est.</th>
+                        <th>Specs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="assets/tbeam_board_1764211384170.png" alt="T-Beam" class="product-img-thumb"></td>
+                        <td><strong>LilyGO T-Beam</strong></td>
+                        <td><span class="highlight">Sí (NEO-6M)</span></td>
+                        <td>Opcional</td>
+                        <td>Soporte 18650</td>
+                        <td>$30 USD</td>
+                        <td><button class="copy-btn" onclick="copyText('ESP32, GPS, LoRa SX1276')">Copiar Specs</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/heltec_board_1764211399361.png" alt="Heltec V3" class="product-img-thumb">
+                        </td>
+                        <td><strong>Heltec V3</strong></td>
+                        <td>No</td>
+                        <td><span class="highlight">OLED Integrada</span></td>
+                        <td>Conector JST</td>
+                        <td>$20 USD</td>
+                        <td><button class="copy-btn" onclick="copyText('ESP32-S3, OLED, LoRa SX1262')">Copiar
+                                Specs</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/rak_wisblock_1764211414121.png" alt="RAK WisBlock"
+                                class="product-img-thumb"></td>
+                        <td><strong>RAK WisBlock</strong></td>
+                        <td>Modular</td>
+                        <td>Modular</td>
+                        <td>Solar + JST</td>
+                        <td>$40 USD</td>
+                        <td><button class="copy-btn" onclick="copyText('nRF52840, Ultra Low Power, SX1262')">Copiar
+                                Specs</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meshtastic Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
