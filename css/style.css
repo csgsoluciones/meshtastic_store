@@ -110,34 +110,26 @@ a:hover {
 
 .hero-image-container {
     flex: 1;
-    background: #ccc;
-    /* Placeholder grey from wireframe */
+    /* Removed wireframe background and border */
     border-radius: 20px;
     overflow: hidden;
     aspect-ratio: 16/9;
     position: relative;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+    /* Added glow instead of grey box */
 }
 
 .hero-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    /* Changed to contain to show full device image */
-    padding: 20px;
-    /* Add some breathing room */
+    object-fit: cover;
+    /* Changed back to cover to fill the area */
+    /* Removed padding to make it bigger */
 }
 
-/* Add X overlay to simulate wireframe placeholder if image fails or just for style */
+/* Removed wireframe X overlay */
 .hero-image-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(0, 0, 0, 0.1) 50%, transparent calc(50% + 1px)),
-        linear-gradient(to bottom right, transparent calc(50% - 1px), rgba(0, 0, 0, 0.1) 50%, transparent calc(50% + 1px));
-    pointer-events: none;
+    display: none;
 }
 
 .hero-text-container {
