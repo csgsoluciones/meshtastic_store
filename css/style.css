@@ -365,28 +365,17 @@ footer {
     flex: 0 0 200px;
 }
 
-.wireframe-x-box {
+.executive-img {
     width: 200px;
-    height: 150px;
-    background: #999;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #777;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Circular image for a friendly look */
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
-/* X effect for wireframe box */
-.wireframe-x-box::before,
-.wireframe-x-box::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top right, transparent calc(50% - 1px), #555 50%, transparent calc(50% + 1px)),
-        linear-gradient(to bottom right, transparent calc(50% - 1px), #555 50%, transparent calc(50% + 1px));
-}
+/* Removed wireframe-x-box styles */
 
 .contact-details h2 {
     font-size: 1.8rem;
