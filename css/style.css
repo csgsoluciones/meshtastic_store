@@ -64,7 +64,7 @@ a:hover {
 }
 
 .logo {
-    font-size: 8rem;
+    font-size: 6em;
     font-weight: 700;
     font-family: var(--font-heading);
     color: #fff;
