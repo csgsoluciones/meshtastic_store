@@ -63,6 +63,15 @@ a:hover {
     max-width: 400px;
 }
 
+.logo {
+    font-size: 8rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
 .search-bar input {
     width: 100%;
     padding: 0.8rem;
@@ -303,6 +312,48 @@ video {
 audio {
     width: 100%;
     margin-top: 1rem;
+}
+
+/* Weather Widget */
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.weather-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.weather-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-accent);
+}
+
+.temp-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.time-display {
+    font-size: 1.2rem;
+    color: #a0a6c0;
+    font-family: var(--font-heading);
 }
 
 /* Footer */

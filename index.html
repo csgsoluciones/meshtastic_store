@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meshtastic Store | Comunicación Off-Grid</title>
+    <title>Meshtastic Storee | Comunicación Off-Grid</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
 </head>
 
 <body>
@@ -97,30 +97,26 @@
         </ol>
     </section>
 
-    <section id="status" style="padding: 2rem 10%; background: var(--card-bg); margin-top: 2rem;">
-        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 1rem;">Estado de la Red</h2>
-        <div class="table-container">
-            <table style="width: 100%; max-width: 600px; margin: 0 auto;">
-                <thead>
-                    <tr>
-                        <th>Nodo Principal</th>
-                        <th>Estado</th>
-                        <th>Uptime</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Master-01</td>
-                        <td><span style="color: var(--accent-color);">Online</span></td>
-                        <td>99.9%</td>
-                    </tr>
-                    <tr>
-                        <td>Relay-Alpha</td>
-                        <td><span style="color: var(--accent-color);">Online</span></td>
-                        <td>98.5%</td>
-                    </tr>
-                </tbody>
-            </table>
+    <section id="regional-info" style="padding: 2rem 10%; background: var(--card-bg); margin-top: 2rem;">
+        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 2rem;">Información Regional</h2>
+        <div class="weather-grid">
+            <!-- Bogotá Card -->
+            <div class="weather-card">
+                <h3>🇨🇴 Bogotá, Colombia</h3>
+                <div class="weather-data">
+                    <div class="temp-display" id="temp-bogota">Cargando...</div>
+                    <div class="time-display" id="time-bogota">--:--</div>
+                </div>
+            </div>
+
+            <!-- Santiago Card -->
+            <div class="weather-card">
+                <h3>🇨🇱 Santiago, Chile</h3>
+                <div class="weather-data">
+                    <div class="temp-display" id="temp-santiago">Cargando...</div>
+                    <div class="time-display" id="time-santiago">--:--</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -128,7 +124,7 @@
         <div class="audio-player-container" style="margin-bottom: 1rem;">
             <p style="color: #888; font-size: 0.8rem; margin-bottom: 0.5rem;">Ambiente Tech</p>
             <audio controls style="height: 30px; width: 200px;">
-                <source src="https://www.soundjay.com/buttons/beep-01a.mp3" type="audio/mpeg">
+                <source src="assets/forest_sounds.mp3" type="audio/mpeg">
                 Tu navegador no soporta audio.
             </audio>
         </div>
@@ -138,7 +134,7 @@
             <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             <a href="#" aria-label="Teléfono"><i class="fas fa-phone"></i></a>
         </div>
-        <p>&copy; 2024 Meshtastic Store. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Meshtastic Store. Todos los derechos reservados.</p>
     </footer>
 
     <script src="js/main.js"></script>
